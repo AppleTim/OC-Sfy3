@@ -1,0 +1,53 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}    {{ form_widget(form) }}
+    <div class="container">
+        <div class="row">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        {{ form_label(form.nom) }}
+                        {{ form_widget(form.nom) }}
+                        {{ form_errors(form.nom) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_label(form.prenom) }}
+                        {{ form_widget(form.prenom) }}
+                        {{ form_errors(form.prenom) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_label(form.email) }}
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_widget(form.sexe) }}
+                        {{ form_label(form.sexe) }}
+                        {{ form_errors(form.sexe) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_label(form.date_naissance) }}
+                        {{ form_widget(form.date_naissance) }}
+                        {{ form_errors(form.date_naissance) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_label(form.plainPassword) }}
+                        {{ form_widget(form.plainPassword) }}
+                        {{ form_errors(form.plainPassword) }}
+                    </div>
+                </div>
+                <div>
+                    <input class="waves-effect waves-light btn" type="submit" value="{{ 'registration.submit'|trans }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}

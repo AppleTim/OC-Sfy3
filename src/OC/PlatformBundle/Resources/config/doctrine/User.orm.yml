@@ -1,0 +1,29 @@
+OC\PlatformBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        nom:
+            type: string
+            length: 255
+            nullable: false
+        prenom:
+            type: string
+            length: 255
+            nullable: false
+        sexe:
+            type: string
+            length: 6
+            nullable: false
+        photo:
+            type: string
+            length: 255
+            nullable: true
+        date_naissance:
+            type: date
+            nullable: false
